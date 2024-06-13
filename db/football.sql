@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `player`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `player` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) DEFAULT NULL,
   `prenom` varchar(50) DEFAULT NULL,
   `age` int DEFAULT NULL,
@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `teams`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `teams` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `clubname` varchar(30) DEFAULT NULL,
   `description` text,
   `Creation` date DEFAULT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE `teams` (
   `Coupe_Européenne` varchar(100) DEFAULT NULL,
   `Capitaine` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,6 +70,7 @@ CREATE TABLE `teams` (
 
 LOCK TABLES `teams` WRITE;
 /*!40000 ALTER TABLE `teams` DISABLE KEYS */;
+INSERT INTO `teams` VALUES (1,'PSG','Club fondé en 1970 dans la capitale, l\'autre l\'huirlreh l\'hqzfudhz ma\'zhsufbzhs','1902-03-06','Ligue 1','Ligue des Champions','Marquinhos'),(2,'grbhgfrn','Club fondé en 1970 dans la capitale, l\'autre l\'huirlreh l\'hqzfudhz ma\'zhsufbzhsebhrbfhyebrvherjierk\'hgebdbdsnefjd','1902-03-06','sdnhvnefd','efdhvndfna','edhsvnd');
 /*!40000 ALTER TABLE `teams` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -82,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-06-12 19:01:36
+-- Dump completed on 2024-06-13 13:29:25
